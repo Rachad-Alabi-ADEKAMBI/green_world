@@ -1,0 +1,55 @@
+.auth-form {
+    .form-row {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 1rem;
+
+        @media (min-width: 576px) {
+            grid-template-columns: 1fr 1fr;
+        }
+    }
+
+    .input-icon-wrapper {
+        position: relative;
+
+        i {
+            position: absolute;
+            left: 1rem;
+            top: 50%;
+            transform: translateY(-50%);
+            color: $gray-500;
+        }
+
+        input {
+            width: 100%;
+            padding: 0.75rem 1rem 0.75rem 2.5rem;
+            border: 1px solid $gray-300;
+            border-radius: $border-radius;
+            font-family: inherit;
+            transition: $transition;
+
+            &:focus {
+                outline: none;
+                border-color: $primary-color;
+                box-shadow: 0 0 0 2px rgba($primary-color, 0.2);
+            }
+        }
+
+        .password-toggle {
+            position: absolute;
+            right: 1rem;
+            top: 50%;
+            transform: translateY(-50%);
+            background: none;
+            border: none;
+            color: $gray-500;
+            cursor: pointer;
+
+            &:hover {
+                color: $gray-700;
+            }
+        }
+    }
+
+    /* Rest of the auth-form styles remain the same */
+}
